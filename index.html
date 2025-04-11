@@ -77,27 +77,36 @@
 
     /* Tilted video box */
     .hero-video {
-    position: absolute;
-    top: 180px;
-    right: 0px;
+    position: relative;
+    top: 500px;
+    left: 900px;
     width: 40%;
     box-shadow: 0 10px 20px rgba(0,0,0,0.6);
     z-index: 0;
     border-radius: 5px;
     overflow: hidden;
+    transition: transform 0.3s;
     }
 
     .hero-video video {
     width: 100%;
     display: block;
     border-radius: 2px;
+    transition: transform 0.3s;
     }
+
+    .hero-video:hover{
+      transform: scale(1.3);
+      }
+
+
 
     /* CARD SECTION */
     .card-section {
-      
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       justify-content: center;
-      gap: 20px;
+      gap: 150px;
       padding: 50px 10%;
       background-color: #ffffff;
     }
@@ -152,13 +161,14 @@
       }
 
       .hero-video {
-        position: static;
-        width: 90%;
-        margin: 20px auto;
+        transition: transform 0.3s;
+      }
+
+      .hero-video:hover{
+      transform: scale(1.3);
       }
 
       .card-section {
-        
         align-items: center;
         padding: 30px 5%;
       }
@@ -209,7 +219,45 @@
       <h3>Smart Interior</h3>
       <p>Includes voice assistant, panoramic HUD, memory seats, and climate AI.</p>
     </div>
+    <div class="card">
+      <h3>Safety Features</h3>
+      <p>A driving experience comparable to Optimus Prime, guaranteed to satisfy you.</p>
+    </div>
+    <div class="card">
+      <h3>Performance</h3>
+      <p>The top spot on the New Taipei Circuit is achieved through pure electric propulsion, with a strong push back capability.</p>
+    </div>
   </section>
+
+  <section id="contact">
+        <form>
+            <h2>Tell us a bit more about yourself</h2>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
+    
+            <label>Your Gender:</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br><br>
+    
+            <label for="dob">Your Date of Birth:</label>
+            <input type="date" id="dob" name="dob"><br><br>
+    
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email"><br><br>
+
+            <label for="telephone">Your Telephone:</label>
+            <input type="telephone" id="telephone" name="telephone" placeholder="Enter your telephone"><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+  <footer style="text-align: center; margin-top: 20px; padding: 10px; background-color: #f2f2f2;">
+    <p>© 2025 Programming4</p>
+    <p>Get in touch with us: <a href="mailto:shinchan-lovers@justlearninghtmlcss.com">shinchan-lovers@justlearninghtmlcss.com</a></p>
+</footer>
 
 </body>
 </html>
